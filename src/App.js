@@ -3,12 +3,14 @@ import 'bulma/css/bulma.css'
 import { DataStore } from '@aws-amplify/datastore'
 import { useEffect, useState } from 'react'
 import { Route } from 'react-router-dom'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
 import CreatePost from './CreatePost'
 import { Post, Comment } from './models'
 import PostContainer from './Post'
 import NavBar from './NavBar'
 import PostList from './PostList'
+
 
 function App () {
   const [posts, setPosts] = useState([])
@@ -42,4 +44,4 @@ function App () {
   )
 }
 
-export default App
+export default withAuthenticator(App)
