@@ -1,4 +1,3 @@
-import 'bulma/css/bulma.css'
 import { Route } from 'react-router-dom'
 
 import CreatePost from './CreatePost'
