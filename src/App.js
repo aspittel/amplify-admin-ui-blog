@@ -1,4 +1,5 @@
 import { Route } from 'react-router-dom'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
 import CreatePost from './CreatePost'
 import PostContainer from './Post'
@@ -26,4 +27,4 @@ function App () {
   )
 }
 
-export default App
+export default withAuthenticator(App)
